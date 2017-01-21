@@ -7,7 +7,7 @@ public class Carta {
     }
 
     enum TnomCarta {
-        DOS, QUATRE, CINC, SIS, SET, SOTA, CAVALL, REI, TRES, AS
+        DOS, QUATRE, CINC, SIS, SET, VUIT, NOU, SOTA, CAVALL, REI, TRES, AS
     }
 
     TColl coll;
@@ -19,6 +19,10 @@ public class Carta {
     }
 
     public String toString() {
-        return this.carta.toString() + " de " + this.coll.toString();
+        if (this.coll == TColl.ORS || this.coll == TColl.ESPASES) {
+            return  "\n" + this.carta.toString() + " d'" + this.coll.toString();
+        } else {
+            return "\n" + this.carta.toString() + " de " + this.coll.toString();
+        }
     }
 }
