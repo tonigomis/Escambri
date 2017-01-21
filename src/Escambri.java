@@ -1,5 +1,4 @@
-
-
+import java.util.Arrays;
 
 /**
  * Created by toni on 18/01/17.
@@ -9,7 +8,5 @@ public class Escambri {
         Baralla b = new Baralla();
         b.mescla();
         System.out.println(b);
-
     }
-
 }
